@@ -42,4 +42,4 @@ First parameter is the button class, and the second parameter is the value attri
 If you have some more helper functions you want to add, fork this repository and add your changes, send a pull request and I'll gladly merge!
 
 ### Conclusion
-ENJOY!!!
+Find this utility useful? Kindly star this repository.
