@@ -20,8 +20,7 @@ class BootstrapCommons {
 		try {
 			if (isset($type)){
 				echo "<div style='margin-bottom: 20px'>";
-				echo "<button class='btn btn-" . $type . "'>";
-				echo $message;
+				echo "<button class='btn btn-" . $type . "' value='" . $message ."'>";
 				echo "</button>";
 				echo "</div>";
 			}
@@ -46,12 +45,12 @@ class BootstrapCommons {
 		}
 	}
 
-	public function bsPanels($type, $header, $body){
+	public function bsPanels($type, $heading, $body){
 		if (!empty($type) && !empty($body)){
 			try {
 				if (isset($header)){
 					echo "<div class='panel panel-" . $type . "'>";
-					echo "<div class='panel-heading'>" . $header . "</div>";
+					echo "<div class='panel-heading'>" . $heading . "</div>";
 					echo "<div class='panel-body'>";
 					echo $body;
 					echo "</div>";
