@@ -16,11 +16,12 @@ class BootstrapCommons {
 		}
 	}
 
-	public function bsButton($type, $message){
+	public function bsButton($btnclass, $type, $message){
 		try {
 			if (isset($type)){
 				echo "<div style='margin-bottom: 20px'>";
-				echo "<button class='btn btn-" . $type . "' value='" . $message ."'>";
+				echo "<button class='btn btn-" . $btnclass . "' type='" . $type ."'>";
+				echo $message;
 				echo "</button>";
 				echo "</div>";
 			}
@@ -67,6 +68,17 @@ class BootstrapCommons {
 			catch (Exception $e){
 				// echo "Panel unavailable";
 			}
+		}
+	}
+
+	public function bsGlyph($name){
+		try {
+			if (isset($name)){
+				echo "<span class='glyphicon glyphicon-" . $name . "'></span>";
+			}
+		}
+		catch (Exception $e){
+			// echo "Glyphicon not in existence yet!";
 		}
 	}
 }
