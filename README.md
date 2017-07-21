@@ -14,10 +14,10 @@ A bunch of bootstrap helper functions that make writing some very basic and comm
 	```php
 	<?php $bsHelper->bsAlert('success', 'You are successfully registered!'); ?>
 	```
-This is going to display a dismissable success alert carrying _You are successfully registered_ in it: just as if you typed 
-	```php
-	<div class='alert alert-success'>You are successfully registered</div>
-	```
+This is going to display a dismissable success alert carrying _You are successfully registered_ in it: just as if you typed
+```php
+<div class='alert alert-success'>You are successfully registered!</div>
+```
 
 #### Making a panel without heading
 If you want to make a panel that has no heading
