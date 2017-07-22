@@ -81,6 +81,25 @@ class BootstrapCommons {
 			// echo "Glyphicon not in existence yet!";
 		}
 	}
+
+	public function bsLabel($labelClass, $content){
+		try {
+			if (isset($labelClass)){
+				echo "<span class='label label-" . $labelClass . "'>" . $content . "</span>";
+			}
+		}
+		catch (Exception $e){
+			// echo "Cannot fetch the kind of label you need, "
+		}
+	}
+
+	public function bsTexts($tag, $textClass, $content){
+		try {
+			if (isset($tag) && isset($textClass)){
+				//
+			}
+		}
+	}
 }
 
 $bsHelper = new BootstrapCommons();

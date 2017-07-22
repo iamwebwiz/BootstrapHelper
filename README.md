@@ -38,6 +38,11 @@ To make buttons , do, for example:
 ```
 First parameter is the button class, and the second parameter is the value attribute of the button
 
+#### Making Bootstrap Labels
+To make labels, do, for example:
+	<?php $bsHelper->bsLabel('success', '3 New Messages'); ?>
+This helper takes two parameters, first is the class of the label, and second is the content/message of the label
+
 ### Contributions
 If you have some more helper functions you want to add, fork this repository and add your changes, send a pull request and I'll gladly merge!
 
