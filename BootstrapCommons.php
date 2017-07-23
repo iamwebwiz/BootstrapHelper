@@ -93,13 +93,13 @@ class BootstrapCommons {
 		}
 	}
 
-	public function bsTexts($tag, $textClass, $content){
-		try {
-			if (isset($tag) && isset($textClass)){
-				//
-			}
-		}
-	}
+	// public function bsTexts($tag, $textClass, $content){
+	// 	try {
+	// 		if (isset($tag) && isset($textClass)){
+	// 			//
+	// 		}
+	// 	}
+	// }
 }
 
 $bsHelper = new BootstrapCommons();
