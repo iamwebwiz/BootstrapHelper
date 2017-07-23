@@ -40,7 +40,9 @@ First parameter is the button class, and the second parameter is the value attri
 
 #### Making Bootstrap Labels
 To make labels, do, for example:
+	```sh
 	<?php $bsHelper->bsLabel('success', '3 New Messages'); ?>
+	```
 This helper takes two parameters, first is the class of the label, and second is the content/message of the label
 
 ### Contributions
