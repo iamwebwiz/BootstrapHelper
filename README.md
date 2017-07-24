@@ -65,5 +65,11 @@ There! You have it!
 ### Contributions
 If you have some more helper functions you want to add, fork this repository and add your changes, send a pull request and I'll gladly merge!
 
-### Conclusion
+### Rate
 Find this utility useful? Kindly star this repository.
+
+## Credits
+Thanks to:
+- [Elusoji Sodeeq](https://twitter.com/sdkcodes) for inspiration
+- [Israel Adura](https://github.com/israeladura) for boosting me the JS way!
+- [Myself](https://twitter.com/iamwebwiz) for "staying with the keys!", lol
