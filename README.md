@@ -11,12 +11,12 @@ A bunch of bootstrap helper functions that make writing some very basic and comm
 - When *BootstrapCommons.php* is successfully included in your script(s), all you have to do is to invoke the methods/functions in the BootstapCommons.php file through the object already instantiated (**$bsHelper**).
 
 #### Making alerts
-- To make use of the alert helper method, all you need to do is: 
-	```php
-	<?php $bsHelper->bsAlert('success', 'You are successfully registered!'); ?>
-	```
-This is going to display a dismissable success alert carrying _You are successfully registered_ in it: just as if you typed
+To make use of the alert helper method, all you need to do is: 
 ```php
+<?php $bsHelper->bsAlert('success', 'You are successfully registered!'); ?>
+```
+This is going to display a dismissable success alert carrying _You are successfully registered_ in it: just as if you typed
+```html
 <div class='alert alert-success'>You are successfully registered!</div>
 ```
 
