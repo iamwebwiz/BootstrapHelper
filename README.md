@@ -20,16 +20,18 @@ This is going to display a dismissable success alert carrying _You are successfu
 <div class='alert alert-success'>You are successfully registered!</div>
 ```
 
-#### Making a panel without heading
-If you want to make a panel that has no heading in your project, example:
-```php
-<?php $bsHelper->bsPanel('primary', 'This is just the beginning of many more greater things!'); ?>
-```
-
-#### Making panels with heading
+#### Making panels with or without heading and footer
 To make panels with heading, for example:
 ```php
-<?php $bsHelper->bsPanels('primary', 'this is the heading', 'this is the body'); ?>
+<?php $bsHelper->bsPanel('primary', 'this is the body of the panel', 'Panel heading', 'Panel footer'); ?>
+```
+The heading and footer parameters are optional, to produce a panel with body and footer only, you can say, for example:
+```php
+<?php $bsHelper->bsPanel('default', 'body of the panel', null, 'panel footer') ?>
+```
+In the same vein, to produce a panel with heading and body only, you can say, for example:
+```php
+<?php $bsHelper->bsPanel('primary', 'body of the panel', 'panel heading') ?>
 ```
 
 #### Making buttons
