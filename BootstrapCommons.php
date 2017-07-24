@@ -49,7 +49,7 @@ class BootstrapCommons {
 	public function bsPanels($type, $heading, $body){
 		if (!empty($type) && !empty($body)){
 			try {
-				if (isset($header)){
+				if (isset($heading)){
 					echo "<div class='panel panel-" . $type . "'>";
 					echo "<div class='panel-heading'>" . $heading . "</div>";
 					echo "<div class='panel-body'>";
@@ -93,13 +93,19 @@ class BootstrapCommons {
 		}
 	}
 
-	// public function bsTexts($tag, $textClass, $content){
-	// 	try {
-	// 		if (isset($tag) && isset($textClass)){
-	// 			//
-	// 		}
-	// 	}
-	// }
+	public function bsText($tag, $content, $textClass = NULL){
+		try {
+			if (is_null($textClass)){
+				echo "<".$tag.">".$content."</".$tag.">";
+			}
+			else {
+				echo "<".$tag." class='text-".$textClass."'>".$content."</".$tag.">";
+			}
+		}
+		catch (Exception $e){
+			// nothing to do...
+		}
+	}
 }
 
 $bsHelper = new BootstrapCommons();

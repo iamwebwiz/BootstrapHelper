@@ -4,6 +4,7 @@ A bunch of bootstrap helper functions that make writing some very basic and comm
 ## Requirements
 - PHP
 - Bootstrap
+- JQuery
 
 ## Usage
 - In order to use these helper functions, all you have to do is include the *BootstrapCommons.php* in your PHP scripts, well, the ones that uses Bootstrap in them anyways (usually front-end/views as the case may be).
@@ -43,8 +44,23 @@ To make labels, do, for example:
 ```php
 <?php $bsHelper->bsLabel('success', '3 New Messages'); ?>
 ```
-
 This helper takes two parameters, first is the class of the label, and second is the content/message of the label
+
+#### Making Contextual Texts
+If you want to make contextual texts by using classes provided by Twitter Bootstrap, such as this
+```html
+<h1 class='text-info'>Heading with info class</h1>
+```
+You only need to call on the method *bsText()* of the helper file. It takes three parameters:
+- The tag (HTML tag e.g 'p', 'h1', 'h5')
+- The content (this is the text you want to display e.g 'Heading with info class')
+- The class (this is the bootstrap contextual class you want to use e.g. _text-info_)
+Note that the third parameter is optional, if you do not insert the third parameter , you are still going to have your content anyways.
+Reproducing the HTML code above using the helper method will look like this:
+```php
+<?php $bsHelper->bsText('h1', 'Heading with info class', 'info'); ?>
+```
+There! You have it!
 
 ### Contributions
 If you have some more helper functions you want to add, fork this repository and add your changes, send a pull request and I'll gladly merge!
