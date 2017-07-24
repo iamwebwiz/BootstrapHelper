@@ -16,11 +16,18 @@ class BootstrapCommons {
 		}
 	}
 
-	public function bsButton($btnclass, $type, $message){
+	public function bsButton($btnclass, $type, $message, $size = NULL){
 		try {
-			if (isset($type)){
+			if (is_null($size)){
 				echo "<div style='margin-bottom: 20px'>";
 				echo "<button class='btn btn-" . $btnclass . "' type='" . $type ."'>";
+				echo $message;
+				echo "</button>";
+				echo "</div>";
+			}
+			else {
+				echo "<div style='margin-bottom: 20px'>";
+				echo "<button class='btn btn-" . $btnclass . " btn-" . $size . "' type='" . $type ."'>";
 				echo $message;
 				echo "</button>";
 				echo "</div>";
@@ -31,43 +38,41 @@ class BootstrapCommons {
 		}
 	}
 
-	public function bsPanel($type, $body){
+	public function bsPanel($type, $body, $heading = NULL, $footer = NULL){
 		try {
-			if (!empty($type) && !empty($body)){
+			if (is_null($heading) AND is_null($footer)){
 				echo "<div class='panel panel-" . $type . "'>";
+				echo "<div class='panel-body'>" . $body . "</div>";
+				echo "</div>";
+			}
+			else if (is_null($footer)){
+				echo "<div class='panel panel-" . $type . "'>";
+				echo "<div class='panel-heading'>" . $heading . "</div>";
 				echo "<div class='panel-body'>";
 				echo $body;
 				echo "</div>";
 				echo "</div>";
 			}
+			else if (is_null($heading)){
+				echo "<div class='panel panel-" . $type . "'>";
+				echo "<div class='panel-body'>";
+				echo $body;
+				echo "</div>";
+				echo "<div class='panel-footer'>" . $footer . "</div>";
+				echo "</div>";
+			}
+			else {
+				echo "<div class='panel panel-" . $type . "'>";
+				echo "<div class='panel-heading'>" . $heading . "</div>";
+				echo "<div class='panel-body'>";
+				echo "" . $body;
+				echo "</div>";
+				echo "<div class='panel-footer'>" . $footer . "</div>";
+				echo "</div>";
+			}
 		}
 		catch (Exception $e){
 			// nothing to do...
-		}
-	}
-
-	public function bsPanels($type, $heading, $body){
-		if (!empty($type) && !empty($body)){
-			try {
-				if (isset($heading)){
-					echo "<div class='panel panel-" . $type . "'>";
-					echo "<div class='panel-heading'>" . $heading . "</div>";
-					echo "<div class='panel-body'>";
-					echo $body;
-					echo "</div>";
-					echo "</div>";
-				}
-				else {
-					echo "<div class='panel panel-" . $type . "'>";
-					echo "<div class='panel-body'>";
-					echo $body;
-					echo "</div>";
-					echo "</div>";
-				}
-			}
-			catch (Exception $e){
-				// nothing to do...
-			}
 		}
 	}
 
