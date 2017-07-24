@@ -78,7 +78,7 @@ class BootstrapCommons {
 
 	public function bsGlyph($name){
 		try {
-			if (isset($name)){
+			if (!is_null($name)){
 				return "<i class='glyphicon glyphicon-" . $name . "'></i> ";
 			}
 		}
