@@ -12,7 +12,7 @@ class BootstrapCommons {
 			}
 		}
 		catch (Exception $e){
-			// echo "Type of alert not set";
+			// nothing to do...
 		}
 	}
 
@@ -27,7 +27,7 @@ class BootstrapCommons {
 			}
 		}
 		catch (Exception $e){
-			// echo "Button not available at the moment";
+			// nothing to do...
 		}
 	}
 
@@ -42,7 +42,7 @@ class BootstrapCommons {
 			}
 		}
 		catch (Exception $e){
-			// echo "Panel unavailable";
+			// nothing to do...
 		}
 	}
 
@@ -66,7 +66,7 @@ class BootstrapCommons {
 				}
 			}
 			catch (Exception $e){
-				// echo "Panel unavailable";
+				// nothing to do...
 			}
 		}
 	}
@@ -78,7 +78,7 @@ class BootstrapCommons {
 			}
 		}
 		catch (Exception $e){
-			// echo "Glyphicon not in existence yet!";
+			// nothing to do...
 		}
 	}
 
@@ -89,7 +89,7 @@ class BootstrapCommons {
 			}
 		}
 		catch (Exception $e){
-			// echo "Cannot fetch the kind of label you need, "
+			// nothing to do...
 		}
 	}
 
@@ -109,3 +109,4 @@ class BootstrapCommons {
 }
 
 $bsHelper = new BootstrapCommons();
+
