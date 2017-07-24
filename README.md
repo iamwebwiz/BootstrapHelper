@@ -70,6 +70,6 @@ Find this utility useful? Kindly star this repository.
 
 ## Credits
 Thanks to:
-- [Elusoji Sodeeq](https://twitter.com/sdkcodes) for inspiration
+- [Elusoji Sodeeq](https://twitter.com/sdktalks) for inspiration
 - [Israel Adura](https://github.com/israeladura) for boosting me the JS way!
 - [Myself](https://twitter.com/iamwebwiz) for "staying with the keys!", lol
