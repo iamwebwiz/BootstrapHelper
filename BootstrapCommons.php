@@ -90,7 +90,7 @@ class BootstrapCommons {
 	public function bsLabel($labelClass, $content){
 		try {
 			if (isset($labelClass)){
-				echo "<span class='label label-" . $labelClass . "'>" . $content . "</span>";
+				return "<span class='label label-" . $labelClass . "'>" . $content . "</span>";
 			}
 		}
 		catch (Exception $e){
@@ -101,10 +101,10 @@ class BootstrapCommons {
 	public function bsText($tag, $content, $textClass = NULL){
 		try {
 			if (is_null($textClass)){
-				echo "<".$tag.">".$content."</".$tag.">";
+				return "<".$tag.">".$content."</".$tag.">";
 			}
 			else {
-				echo "<".$tag." class='text-".$textClass."'>".$content."</".$tag.">";
+				return "<".$tag." class='text-".$textClass."'>".$content."</".$tag.">";
 			}
 		}
 		catch (Exception $e){
