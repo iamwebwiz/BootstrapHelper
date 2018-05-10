@@ -62,7 +62,19 @@ Reproducing the HTML code above using the helper method will look like this:
 ```php
 <?php $bsHelper->bsText('h1', 'Heading with info class', 'info'); ?>
 ```
-There! You have it!
+
+You can also use custom classes to further style your elements. These classes are passed as arguments (in an array form) into the corresponding function. For example:
+```php
+<?php $bsHelper->bsText('h1', 'Heading with info class', 'info', ['text-center', 'anotherclass']); ?>
+```
+or alternatively (and more preferrably)
+```php
+<?php $bsHelper->bsText('h1', 'Heading with info class', 'info', ['text-center anotherclass yetanotherclass']); ?>
+```
+
+To see how many of these can be used, check out test.php to see the live demo. You could also just pick up the code from there to use. 
+
+There! You have it! Hopefuly, more functions will be added in the future.
 
 ### Contributions
 If you have some more helper functions you want to add, fork this repository and add your changes, send a pull request and I'll gladly merge!
