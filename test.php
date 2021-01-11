@@ -31,20 +31,33 @@
 		}
 	</style>
 </head>
-<body class="container mt-5">
-	<?php echo $bsHelper->bsText('h1', "BootstrapHelper", '', ['display-4', 'pb-2']);?>
+<body class="container mt-5 ">
+	<?php echo $bsHelper->bsText('h1', "BootstrapHelper", '', ['pb-2', 'h1', 'font-weight-light']);?>
 	<div class="row">
 		<div class="col-md-6">
 			<div>
-				<?php echo $bsHelper->bsText('p', "bsAlert without custom classes for styling", 'muted');?>
+				<?php echo $bsHelper->bsText('p', "<code>bsAlert</code> without custom classes for styling", 'muted');?>
 				<?php echo $bsHelper->bsAlert('success', 'You are successfully registered!'); ?>
 			</div>
 			<hr />
 			<div>
-				<?php echo $bsHelper->bsText('p', "bsAlert with custom styling and classes", 'muted');?>
-				<?php echo $bsHelper->bsAlert('success', 'You are <b>successfully</b> registered!', ['border-0 mt-5 w-50 ml-auto mr-auto rounded-0']); ?>
-				<!-- or -->
-				<?php echo $bsHelper->bsAlert('success', 'You are <i class="fa fa-check"></i> successfully registered!', ['border-0', 'mt-5', 'w-50', 'ml-auto', 'mr-auto', 'rounded-0']); ?>
+				<?php echo $bsHelper->bsText('p', "<code>bsAlert</code> with custom styling and classes", 'muted');?>
+				<?php echo $bsHelper->bsAlert('success', 'You are <b>successfully</b> registered!', ['border-0', 'mt-2', 'ml-auto', 'mr-auto', 'rounded-0']); ?>
+			</div>
+			<hr />
+			<div>
+				<?php echo $bsHelper->bsText('p', "<code>bsAlert</code> with Icon", 'muted');?>
+				<?php echo $bsHelper->bsAlert('success', 'You are <i class="fa fa-check"></i> successfully registered!', ['border-0', 'mt-2', 'ml-auto', 'mr-auto', 'rounded-0']); ?>
+			</div>
+			<hr />
+			<div>
+				<?php echo $bsHelper->bsText('p', "<code>bsProgress</code> with animated stripes", 'muted');?>
+				<?php echo $bsHelper->bsProgress('0', '32', '100', ['bg-success', 'progress-bar-striped', 'progress-bar-animated']); ?>
+			</div>
+			<hr />
+			<div>
+				<?php echo $bsHelper->bsText('p', "<code>bsCard</code> with HTML", 'muted');?>
+				<?php echo $bsHelper->bsCard('This is the body of the card.<br> <a href="#">This is a link</a>', 'Card Header', 'Card Footer') ?>
 			</div>
 			<hr />
 		</div>
@@ -52,23 +65,29 @@
 		<div class="col-md-6">
 			<div>
 				<!-- bs button without custom styling -->
-				<?php echo $bsHelper->bsText('p', "bsButton without custom styling", 'muted');?>
-				<?php echo $bsHelper->bsButton('info', 'Submit', 'Submit This'); ?>
+				<?php echo $bsHelper->bsText('p', "<code>bsButton</code> without custom styling", 'muted');?>
+				<?php echo $bsHelper->bsButton('info', 'Submit', 'Submit This', ['btn-lg','pb-2']); ?>
 			</div>
 			<hr />
 			<div>
 				<!-- with custom classes -->
-				<?php echo $bsHelper->bsText('p', "bsButton with custom styling, try hovering", 'muted');?>
-				<?php echo $bsHelper->bsButton('outline-warning', 'Submit', '<i class="fa fa-check"></i> Submit This', ['mybtn rounded-0 border-0']); ?>
+				<?php echo $bsHelper->bsText('p', "<code>bsButton</code> with custom styling, try hovering", 'muted');?>
+				<?php echo $bsHelper->bsButton('outline-warning', 'Submit', '<i class="fa fa-check"></i> Submit This', ['btn-lg', 'mybtn', 'rounded-0', 'border-0']); ?>
 			</div>
 			<hr />
 			<div>
 				<!-- Text classes with bsText -->
-				<?php echo $bsHelper->bsText('p', "Different text classes with bsText", 'muted');?>
+				<?php echo $bsHelper->bsText('p', "<code>bsText</code> with different text classes", 'muted');?>
 				<?php echo $bsHelper->bsText('h2', "<code>h2: </code> Text Primary", 'primary');?>
 				<?php echo $bsHelper->bsText('h3', "<code>h3: </code> Text Success", 'success');?>
-				<?php echo $bsHelper->bsText('h4', "<code>h4: </code> Text warning", 'warning');?>
 				<?php echo $bsHelper->bsText('blockquote', '<code>blockquote with custom classes for styling: </code> Text secondary', 'secondary', ['blockquote', 'text-right', 'w-75']);?>
+			</div>
+			<hr />
+			<div>
+				<?php echo $bsHelper->bsText('p', "<code>bsBadge</code> with <code>.badge-pill</code>", 'muted');?>
+				<?php echo $bsHelper->bsBadge('Text Primary', 'primary', ['badge-pill', 'p-3']);?>
+				<?php echo $bsHelper->bsBadge('Text Secondary', 'secondary', ['badge-pill', 'p-2']);?>
+				<?php echo $bsHelper->bsBadge('Text Success', 'success', ['badge-pill', 'p-1']);?>
 			</div>
 			<hr />
 		</div>

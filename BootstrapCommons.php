@@ -5,6 +5,8 @@
 *  supported. Simply include an array of your custom classes in the classlists
 *  Added class show to bsAlert, so as to support bootstrap 4
 *  
+*  ## 2021-01-11
+* - Added Progress, Card and Badge components
 */
 
 class BootstrapCommons {
@@ -58,9 +60,9 @@ class BootstrapCommons {
         }
     }
 
-    // Panels are for older bs versions < 4.0. Gotta add support for cards
-    // ToDo, add custom class support for this too. I just don't know where to start from
-    
+        
+
+
     /**
      * Panel Component
      * 
@@ -71,6 +73,7 @@ class BootstrapCommons {
      * @return string
      */
     public function bsPanel($type, $body, $heading = NULL, $footer = NULL){
+        // Panels are for older Bootstrap versions < 4.0
         try {
             if (is_null($heading) AND is_null($footer)){
                 return "<div class='panel panel-$type'>
@@ -139,8 +142,9 @@ class BootstrapCommons {
      * @param  Array|null $classes
      * @return string
      */
-    // Labels have been replaced by badges, gotta add support for badges later too.
+    
     public function bsLabel($labelClass, $content, Array $classes = NULL){
+        // Labels have been replaced by Badges
         try {
             if (isset($labelClass)){
                 return "<span class='label label-$labelClass {$this->classes($classes)}'>
@@ -171,6 +175,106 @@ class BootstrapCommons {
                 return "<$tag class='text-$textClass {$this->classes($classes)}'> 
                             $content 
                         </$tag>";
+            }
+        } catch (Exception $e){
+            // nothing to do...
+        }
+    }
+
+    /**
+     * Bootstrap Progress Component
+     * 
+     * @param  int          $valueMin
+     * @param  int          $valueNow
+     * @param  int          $valueMax
+     * @param  Array|null   $classes
+     * 
+     * @return string
+     */
+    public function bsProgress($valueMin, $valueNow, $valueMax, Array $classes = NULL){
+
+        //Filter variables
+        $valueMin = filter_var($valueMin, FILTER_SANITIZE_NUMBER_INT);
+        $valueNow = filter_var($valueNow, FILTER_SANITIZE_NUMBER_INT);
+        $valueMax = filter_var($valueMax, FILTER_SANITIZE_NUMBER_INT);
+
+        try {
+            return "<div class='progress'>
+                        <div class='progress-bar {$this->classes($classes)}' role='progressbar' style='width: $valueNow%' 
+                            aria-valuenow='$valueNow' aria-valuemin='$valueMin' aria-valuemax='$valueMax'>
+                        </div>
+                    </div>";
+        } catch (Exception $e){
+            // nothing to do...
+        }
+    }
+
+    /**
+     * Card Component
+     * 
+     * @param  string $body
+     * @param  string $header
+     * @param  string $footer
+     * @return string
+     */
+    public function bsCard($body, $header = NULL, $footer = NULL){
+        try {
+            if (is_null($header) AND is_null($footer)){
+                return "<div class='card'>
+                            <div class='card-body'>
+                                $body
+                            </div>
+                        </div>";
+            } else if (is_null($footer)){
+                return "<div class='card'>
+                            <div class='card-header'>
+                                $header
+                            </div>
+                            <div class='card-body'>
+                                $body
+                            </div>
+                        </div>";
+            } else if (is_null($header)){
+                return "<div class='card'>
+                            <div class='card-body'>
+                                $body
+                            </div>
+                            <div class='card-footer'>
+                                $footer
+                            </div>
+                        </div>";
+            } else {
+                return "<div class='card'>
+                            <div class='card-header'>
+                                $header
+                            </div>
+                            <div class='card-body'>
+                                $body
+                            </div>
+                            <div class='card-footer'>
+                                $footer
+                            </div>
+                        </div>";
+            }
+        } catch (Exception $e){
+            // nothing to do...
+        }
+    }
+
+    /**
+     * Badge Component
+     * 
+     * @param  string       $content
+     * @param  string       $type
+     * @param  Array|null   $classes
+     * @return string
+     */
+    public function bsBadge($content, $type, Array $classes = NULL){
+        try {
+            if (isset($type)){
+                return "<span class='badge badge-$type {$this->classes($classes)}'>
+                            $content
+                        </span>";
             }
         } catch (Exception $e){
             // nothing to do...
