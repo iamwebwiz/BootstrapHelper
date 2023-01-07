@@ -11,7 +11,7 @@ A bunch of bootstrap helper functions that make writing some very basic and comm
 - When *BootstrapCommons.php* is successfully included in your script(s), all you have to do is to invoke the methods/functions in the BootstapCommons.php file through the object already instantiated (**$bsHelper**).
 
 #### Making alerts
-To make use of the alert helper method, all you need to do is: 
+To make use of the alert helper method, all you need to do is:
 ```php
 <?php $bsHelper->bsAlert('success', 'You are successfully registered!'); ?>
 ```
@@ -72,7 +72,7 @@ or alternatively (and more preferrably)
 <?php $bsHelper->bsText('h1', 'Heading with info class', 'info', ['text-center anotherclass yetanotherclass']); ?>
 ```
 
-To see how many of these can be used, check out test.php to see the live demo. You could also just pick up the code from there to use. 
+To see how many of these can be used, check out test.php to see the live demo. You could also just pick up the code from there to use.
 
 There! You have it! Hopefuly, more functions will be added in the future.
 
@@ -84,6 +84,6 @@ Find this utility useful? Kindly star this repository.
 
 ## Credits
 Thanks to:
-- [Elusoji Sodeeq](https://twitter.com/sdktalks) for inspiration
-- [Israel Adura](https://github.com/israeladura) for boosting me the JS way!
-- [Myself](https://twitter.com/iamwebwiz) for "staying with the keys!", lol
+- [Elusoji Sodeeq](https://twitter.com/sdktalks)
+- [Israel Adura](https://github.com/israeladura)
+- [Myself](https://twitter.com/iamwebwiz)
